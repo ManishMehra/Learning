@@ -149,5 +149,34 @@ irb(main):021:0> 3.succ
 => 4
 
 
+Swap two variables without using third variable
+irb(main):004:0> a, b = b, a
+=> [6, 4]
 
 
+def contains_digit?
+self.contains_digit =~ /\d+/
+
+
+
+def contains_digit?
+!(self =~ /\d+/).nil?
+ end
+
+
+
+alchemy@alchemy-Veriton-M200-H61:~$ irb
+irb(main):001:0> class Money
+irb(main):002:1> def initialize ( arg)
+irb(main):003:2> @value = arg
+irb(main):004:2> end
+irb(main):005:1> def +( arg)
+irb(main):006:2> @value + arg
+irb(main):007:2> end
+irb(main):008:1> end
+=> nil
+irb(main):009:0> m = Money.new( 2)
+=> #<Money:0x9155f8c @value=2>
+irb(main):010:0> m +2
+=> 4
+irb(main):011:0> 
