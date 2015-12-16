@@ -1,0 +1,153 @@
+Install ruby: sudo apt-get install-full
+GC mechanism: Mark and Sweep
+Gems: Extensible libraries
+irb(main):015:0> %W[This will become an array].join(',')
+=> "This,will,become,an,array"
+
+irb(main):008:0> %W[This will become an array]
+=> ["This", "will", "become", "an", "array"]
+
+hash: key value pair
+
+irb(main):002:0> todo = true and false ? "Clap your hands" : "DO nothing"
+=> "DO nothing"
+irb(main):003:0> todo = false and false ? "Clap your hands" : "DO nothing"
+=> false
+irb(main):004:0> todo = false && false ? "Clap your hands" : "DO nothing"
+=> "DO nothing"
+
+and or = control flow statement
+
+irb(main):012:0> (1..10).to_a
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+irb(main):013:0> ('a' .. 'z').to_a
+=> ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+irb(main):016:0> 2.+3
+=> 5
+
+irb(main):021:0> nil ? true : false
+=> false
+Reason: nil is false in ruby
+
+irb(main):024:0> "" ? true : false
+(irb):24: warning: string literal in condition
+=> true
+
+Singleton class does not has name.
+
+Block comment: =begin
+		    =end
+
+%q| |
+
+ASCII = ? == .
+
+ri chr
+
+
+
+
+case
+	when
+	when
+	else
+
+irb(main):033:0> 4.times {puts "Loop Number #{x}"}
+NameError: undefined local variable or method `x' for main:Object
+	from (irb):33:in `block in irb_binding'
+	from (irb):33:in `times'
+	from (irb):33
+	from /usr/bin/irb:12:in `<main>'
+irb(main):034:0> 4.times {x puts "Loop Number #{x}"}
+NameError: undefined local variable or method `x' for main:Object
+	from (irb):34:in `block in irb_binding'
+	from (irb):34:in `times'
+	from (irb):34
+	from /usr/bin/irb:12:in `<main>'
+irb(main):035:0> 4.times {|x| puts "Loop Number #{x}"}
+Loop Number 0
+Loop Number 1
+Loop Number 2
+Loop Number 3
+=> 4
+irb(main):036:0> 
+
+
+
+
+
+
+irb(main):036:0> a,b,c = 1,4,67
+=> [1, 4, 67]
+irb(main):037:0> a
+=> 1
+irb(main):038:0> b
+=> 4
+irb(main):039:0> c
+=> 67
+
+
+String vs symbol
+irb(main):008:0> 3.times.collect{"hello"}.collect(&:object_id)
+=> [80259210, 80259200, 80259190]
+irb(main):009:0> 3.times.collect{:hello}.collect(&:object_id)
+=> [228728, 228728, 228728]
+
+Symbol will not be collected
+
+
+Only ' and \ can be escaped inside single quotes.
+
+
+irb(main):012:0> hash = Hash.[](1 =>"a", 4 => "h")
+=> {1=>"a", 4=>"h"}
+
+
+5.step(50, 5) {|x| puts x}
+10.downto(1) {|x| puts x}
+1.upto(10){puts "hello"}
+
+
+
+
+irb(main):005:0> def method (&block)
+irb(main):006:1> block.call
+irb(main):007:1> end
+=> nil
+
+irb(main):011:0> method {puts 1+1; puts 3+2}
+2
+5
+
+Block can always be a last parameter
+
+
+
+irb(main):001:0> def open_door door: :all
+irb(main):002:1> end
+SyntaxError: (irb):1: syntax error, unexpected ':', expecting ';' or '\n'
+def open_door door: :all
+                   ^
+(irb):2: syntax error, unexpected keyword_end, expecting $end
+	from /usr/bin/irb:12:in `<main>'
+irb(main):003:0> 
+
+
+SyntaxError: (irb):13: syntax error, unexpected ')'
+	from /usr/bin/irb:12:in `<main>'
+irb(main):014:0> class Integer
+irb(main):015:1> def more
+irb(main):016:2> return self+1
+irb(main):017:2> end
+irb(main):018:1> end
+=> nil
+
+
+irb(main):021:0> 3.succ
+=> 4
+
+
+
+
