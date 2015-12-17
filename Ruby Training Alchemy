@@ -458,3 +458,11 @@ rubygems.org
 
 
 return statement will return the control
+
+
+Here document: https://en.wikibooks.org/wiki/Ruby_Programming/Here_documents
+
+Conversion of data types
+to_i, to_a, to_s, to_sym
+
+< means deriving
