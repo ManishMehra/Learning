@@ -1,39 +1,39 @@
 Install ruby: sudo apt-get install-full
 GC mechanism: Mark and Sweep
 Gems: Extensible libraries
-irb(main):015:0> %W[This will become an array].join(',')
-=> "This,will,become,an,array"
+irb(main):015:0> %W[This will become an array].join(',') 
+=> "This,will,become,an,array" 
 
-irb(main):008:0> %W[This will become an array]
-=> ["This", "will", "become", "an", "array"]
+irb(main):008:0> %W[This will become an array] 
+=> ["This", "will", "become", "an", "array"] 
 
 hash: key value pair
 
-irb(main):002:0> todo = true and false ? "Clap your hands" : "DO nothing"
-=> "DO nothing"
-irb(main):003:0> todo = false and false ? "Clap your hands" : "DO nothing"
-=> false
-irb(main):004:0> todo = false && false ? "Clap your hands" : "DO nothing"
-=> "DO nothing"
+irb(main):002:0> todo = true and false ? "Clap your hands" : "DO nothing" 
+=> "DO nothing" 
+irb(main):003:0> todo = false and false ? "Clap your hands" : "DO nothing" 
+=> false 
+irb(main):004:0> todo = false && false ? "Clap your hands" : "DO nothing" 
+=> "DO nothing" 
 
 and or = control flow statement
 
-irb(main):012:0> (1..10).to_a
-=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+irb(main):012:0> (1..10).to_a 
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
 
-irb(main):013:0> ('a' .. 'z').to_a
-=> ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+irb(main):013:0> ('a' .. 'z').to_a 
+=> ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"] 
 
-irb(main):016:0> 2.+3
-=> 5
+irb(main):016:0> 2.+3 
+=> 5 
 
-irb(main):021:0> nil ? true : false
-=> false
+irb(main):021:0> nil ? true : false 
+=> false 
 Reason: nil is false in ruby
 
-irb(main):024:0> "" ? true : false
-(irb):24: warning: string literal in condition
-=> true
+irb(main):024:0> "" ? true : false 
+(irb):24: warning: string literal in condition 
+=> true 
 
 Singleton class does not has name.
 
@@ -54,24 +54,24 @@ case
 	when
 	else
 
-irb(main):033:0> 4.times {puts "Loop Number #{x}"}
-NameError: undefined local variable or method `x' for main:Object
-	from (irb):33:in `block in irb_binding'
-	from (irb):33:in `times'
-	from (irb):33
-	from /usr/bin/irb:12:in `<main>'
-irb(main):034:0> 4.times {x puts "Loop Number #{x}"}
-NameError: undefined local variable or method `x' for main:Object
-	from (irb):34:in `block in irb_binding'
-	from (irb):34:in `times'
-	from (irb):34
-	from /usr/bin/irb:12:in `<main>'
-irb(main):035:0> 4.times {|x| puts "Loop Number #{x}"}
-Loop Number 0
-Loop Number 1
-Loop Number 2
-Loop Number 3
-=> 4
+irb(main):033:0> 4.times {puts "Loop Number #{x}"} 
+NameError: undefined local variable or method `x' for main:Object 
+	from (irb):33:in `block in irb_binding' 
+	from (irb):33:in `times' 
+	from (irb):33 
+	from /usr/bin/irb:12:in `<main>' 
+irb(main):034:0> 4.times {x puts "Loop Number #{x}"} 
+NameError: undefined local variable or method `x' for main:Object 
+	from (irb):34:in `block in irb_binding' 
+	from (irb):34:in `times' 
+	from (irb):34 
+	from /usr/bin/irb:12:in `<main>' 
+irb(main):035:0> 4.times {|x| puts "Loop Number #{x}"} 
+Loop Number 0 
+Loop Number 1 
+Loop Number 2 
+Loop Number 3 
+=> 4 
 irb(main):036:0> 
 
 
@@ -79,21 +79,21 @@ irb(main):036:0>
 
 
 
-irb(main):036:0> a,b,c = 1,4,67
-=> [1, 4, 67]
-irb(main):037:0> a
-=> 1
-irb(main):038:0> b
-=> 4
-irb(main):039:0> c
-=> 67
+irb(main):036:0> a,b,c = 1,4,67 
+=> [1, 4, 67] 
+irb(main):037:0> a 
+=> 1 
+irb(main):038:0> b 
+=> 4 
+irb(main):039:0> c 
+=> 67 
 
 
 String vs symbol
-irb(main):008:0> 3.times.collect{"hello"}.collect(&:object_id)
-=> [80259210, 80259200, 80259190]
-irb(main):009:0> 3.times.collect{:hello}.collect(&:object_id)
-=> [228728, 228728, 228728]
+irb(main):008:0> 3.times.collect{"hello"}.collect(&:object_id) 
+=> [80259210, 80259200, 80259190] 
+irb(main):009:0> 3.times.collect{:hello}.collect(&:object_id) 
+=> [228728, 228728, 228728] 
 
 Symbol will not be collected
 
@@ -101,56 +101,56 @@ Symbol will not be collected
 Only ' and \ can be escaped inside single quotes.
 
 
-irb(main):012:0> hash = Hash.[](1 =>"a", 4 => "h")
-=> {1=>"a", 4=>"h"}
+irb(main):012:0> hash = Hash.[](1 =>"a", 4 => "h") 
+=> {1=>"a", 4=>"h"} 
 
 
 5.step(50, 5) {|x| puts x}
-10.downto(1) {|x| puts x}
+10.downto(1) {|x| puts x} 
 1.upto(10){puts "hello"}
 
 
 
 
-irb(main):005:0> def method (&block)
-irb(main):006:1> block.call
-irb(main):007:1> end
-=> nil
+irb(main):005:0> def method (&block) 
+irb(main):006:1> block.call 
+irb(main):007:1> end 
+=> nil 
 
-irb(main):011:0> method {puts 1+1; puts 3+2}
-2
-5
+irb(main):011:0> method {puts 1+1; puts 3+2} 
+2 
+5 
 
 Block can always be a last parameter
 
 
 
-irb(main):001:0> def open_door door: :all
-irb(main):002:1> end
-SyntaxError: (irb):1: syntax error, unexpected ':', expecting ';' or '\n'
-def open_door door: :all
-                   ^
-(irb):2: syntax error, unexpected keyword_end, expecting $end
-	from /usr/bin/irb:12:in `<main>'
+irb(main):001:0> def open_door door: :all 
+irb(main):002:1> end 
+SyntaxError: (irb):1: syntax error, unexpected ':', expecting ';' or '\n' 
+def open_door door: :all 
+                   ^ 
+(irb):2: syntax error, unexpected keyword_end, expecting $end 
+	from /usr/bin/irb:12:in `<main>' 
 irb(main):003:0> 
 
 
-SyntaxError: (irb):13: syntax error, unexpected ')'
-	from /usr/bin/irb:12:in `<main>'
-irb(main):014:0> class Integer
-irb(main):015:1> def more
-irb(main):016:2> return self+1
-irb(main):017:2> end
-irb(main):018:1> end
-=> nil
+SyntaxError: (irb):13: syntax error, unexpected ')' 
+	from /usr/bin/irb:12:in `<main>' 
+irb(main):014:0> class Integer 
+irb(main):015:1> def more 
+irb(main):016:2> return self+1 
+irb(main):017:2> end 
+irb(main):018:1> end 
+=> nil 
 
 
-irb(main):021:0> 3.succ
-=> 4
+irb(main):021:0> 3.succ 
+=> 4 
 
 
 Swap two variables without using third variable
-irb(main):004:0> a, b = b, a
+irb(main):004:0> a, b = b, a 
 => [6, 4]
 
 
@@ -159,44 +159,43 @@ self.contains_digit =~ /\d+/
 
 
 
-def contains_digit?
-!(self =~ /\d+/).nil?
- end
+def contains_digit? 
+!(self =~ /\d+/).nil? 
+ end 
 
 
 
-write a Money class and allow following 
-operations + - / *
+write a Money class and allow following operations + - / *
 
-alchemy@alchemy-Veriton-M200-H61:~$ irb
-irb(main):001:0> class Money
-irb(main):002:1> def initialize ( arg)
-irb(main):003:2> @value = arg
-irb(main):004:2> end
-irb(main):005:1> def +( arg)
-irb(main):006:2> @value + arg
-irb(main):007:2> end
-irb(main):008:1> end
-=> nil
-irb(main):009:0> m = Money.new( 2)
-=> #<Money:0x9155f8c @value=2>
-irb(main):010:0> m +2
-=> 4
+alchemy@alchemy-Veriton-M200-H61:~$ irb 
+irb(main):001:0> class Money 
+irb(main):002:1> def initialize ( arg) 
+irb(main):003:2> @value = arg 
+irb(main):004:2> end 
+irb(main):005:1> def +( arg) 
+irb(main):006:2> @value + arg 
+irb(main):007:2> end 
+irb(main):008:1> end 
+=> nil 
+irb(main):009:0> m = Money.new( 2) 
+=> #<Money:0x9155f8c @value=2> 
+irb(main):010:0> m +2 
+=> 4 
 irb(main):011:0> 
 
 
 
 
-irb(main):013:0> Time.now - Time.mktime(1900, 01, 01)
-=> 3659259991.5320716
+irb(main):013:0> Time.now - Time.mktime(1900, 01, 01) 
+=> 3659259991.5320716 
 
 
 
-irb(main):015:0> def leapYear ( arg)
-irb(main):016:1> arg.select{|e| (e%4==0) || ((e%100 == 0) && (e%400))}
-irb(main):017:1> end
-=> nil
-irb(main):018:0> leapYear(2000..2020)
+irb(main):015:0> def leapYear ( arg) 
+irb(main):016:1> arg.select{|e| (e%4==0) || ((e%100 == 0) && (e%400))} 
+irb(main):017:1> end 
+=> nil 
+irb(main):018:0> leapYear(2000..2020) 
 
 
 
@@ -215,51 +214,50 @@ Access the constant variables: 	ClassName::Constant
 					:: is called scope resolution operator
 
 
-irb(main):001:0> class FirstClass
-irb(main):002:1> A1=20
-irb(main):003:1> end
-=> 20
-
-irb(main):009:0> class SecondClass
-irb(main):010:1> A1=40
-irb(main):011:1> end
-=> 40
-irb(main):012:0> a = SecondClass::A1
-=> 40
+irb(main):001:0> class FirstClass 
+irb(main):002:1> A1=20 
+irb(main):003:1> end 
+=> 20 
+irb(main):009:0> class SecondClass 
+irb(main):010:1> A1=40 
+irb(main):011:1> end 
+=> 40 
+irb(main):012:0> a = SecondClass::A1 
+=> 40 
 irb(main):013:0> 
 
 
 
 
 split 20 into arrays like this:
-[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], ["2", "0"]]
+[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], ["2", "0"]] 
 
 [(0..20).to_a, 20.to_s.scan(/./)]
 
 Hash:
-irb(main):013:0> Hash[(0..20).to_a, 20.to_s.scan(/./)]
-=> {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]=>["2", "0"]}
+irb(main):013:0> Hash[(0..20).to_a, 20.to_s.scan(/./)] 
+=> {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]=>["2", "0"]} 
 
 
 a.ord will give you 
 
 %q: interpolation doesn't happen
 %Q: interpolates
-irb(main):018:0> %q(value is #{a})
-=> "value is \#{a}"
-irb(main):019:0> %Q(value is #{a})
-=> "value is 5"
+irb(main):018:0> %q(value is #{a}) 
+=> "value is \#{a}" 
+irb(main):019:0> %Q(value is #{a}) 
+=> "value is 5" 
 
 %w: Split it into single quoted like array
 %W: split it into double quoted like array
 
 
 Escape characters:
-irb(main):025:0> a = "I have \"a\" \\cat"
-=> "I have \"a\" \\cat"
-irb(main):026:0> puts a
-I have "a" \cat
-=> nil
+irb(main):025:0> a = "I have \"a\" \\cat" 
+=> "I have \"a\" \\cat" 
+irb(main):026:0> puts a 
+I have "a" \cat 
+=> nil 
 
 
 
@@ -290,38 +288,38 @@ end
 times.collect{|e| x+(e*(7*24*60*60)}
 
 
-irb(main):107:0> "this is an example".split(' ').pop
-=> "example"
+irb(main):107:0> "this is an example".split(' ').pop 
+=> "example" 
 
 
 Hash:
-irb(main):123:0> hash = {'a'=>1}
-=> {"a"=>1}
-irb(main):124:0> hash["b"]= "new"
-=> "new"
-irb(main):125:0> puts hash
-{"a"=>1, "b"=>"new"}
-=> nil
-irb(main):126:0> ^C
-irb(main):126:0> puts hash ["a"]
-1
-=> nil
+irb(main):123:0> hash = {'a'=>1} 
+=> {"a"=>1} 
+irb(main):124:0> hash["b"]= "new" 
+=> "new" 
+irb(main):125:0> puts hash 
+{"a"=>1, "b"=>"new"} 
+=> nil 
+irb(main):126:0> ^C 
+irb(main):126:0> puts hash ["a"] 
+1 
+=> nil 
 
 Hash within hashes:
 
-irb(main):129:0> hash ["cool"] = {"a"=>"b"}
-=> {"a"=>"b"}
-irb(main):130:0> hash
-=> {"a"=>1, "b"=>"new", "cool"=>{"a"=>"b"}}
+irb(main):129:0> hash ["cool"] = {"a"=>"b"} 
+=> {"a"=>"b"} 
+irb(main):130:0> hash 
+=> {"a"=>1, "b"=>"new", "cool"=>{"a"=>"b"}} 
 irb(main):131:0> 
 
 
 Safe way of defining constant:
 
-irb(main):131:0> ABC||= "Hello"
-=> "Hello"
-irb(main):132:0> ABC||= "Hi"
-=> "Hello"
+irb(main):131:0> ABC||= "Hello" 
+=> "Hello" 
+irb(main):132:0> ABC||= "Hi" 
+=> "Hello" 
 
 
 
@@ -331,15 +329,111 @@ collecte
 each
 
 Range:
-irb(main):135:0> ('a'..'z').to_a
-=> ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+irb(main):135:0> ('a'..'z').to_a 
+=> ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"] 
 
 
 === is equvalent to include?
-irb(main):139:0* (1..10)===4
-=> true
-irb(main):140:0> (1..10).include?( 4)
-=> true
+irb(main):139:0* (1..10)===4 
+=> true 
+irb(main):140:0> (1..10).include?( 4) 
+=> true 
 start...end excludes end
 start..end includes end
 
+
+
+irb(main):149:0> Hash.ancestors 
+=> [Hash, Enumerable, Object, Kernel, BasicObject] 
+
+
+
+Symbol vs Strings
+Symbols are global and not garbage collected. Have contant object_id
+Strings are local and garbage collected. Have variable object_id.
+
+
+
+Compare object_id
+irb(main):171:0> "test".equal?("test") 
+=> false 
+irb(main):172:0> "test".equal?"test" 
+=> false 
+
+Compare value
+irb(main):173:0> "test".eql?"test" 
+=> true 
+
+irb(main):007:0> :h.equal? :h 
+=> true 
+
+
+
+Iterators: Collect vs Select
+Collect: collects element
+Select: Resule comes
+
+
+
+gets: takes input from user
+Chomp: chomps the new line as soon as the input is provided
+
+irb(main):006:0> gets "h" 
+38 
+end 
+
+
+
+^CIRB::Abort: abort then interrupt! 
+
+irb(main):009:0> gets.chomp "h" 
+56 
+=> "56\n" 
+
+change.each{|x| puts #{x}]
+
+
+Round off:
+irb(main):004:0> 10.2031.round( 2) 
+=> 10.2 
+
+System command:
+%x( ls )
+
+
+f = File.open(“/blah”)
+f.open
+f.close
+
+target = open(filename, 'w')
+
+
+Exception handlers:
+
+begin
+	# process
+rescue
+	# handle error
+else
+ puts “No error! Great”
+ensure
+	f.close unless f.nil?
+End
+
+
+
+Raise
+raise “message”
+raise “details”
+
+
+gsub(/@@@/) 
+It is global substitution. It will not stop in the first search, it will keep going till the last element.
+
+
+
+Same thing using send: 
+irb(main):007:0> 1.to_s
+=> "1"
+irb(main):008:0> 1.send :to_s
+=> "1"
