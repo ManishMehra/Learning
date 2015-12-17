@@ -290,3 +290,56 @@ end
 times.collect{|e| x+(e*(7*24*60*60)}
 
 
+irb(main):107:0> "this is an example".split(' ').pop
+=> "example"
+
+
+Hash:
+irb(main):123:0> hash = {'a'=>1}
+=> {"a"=>1}
+irb(main):124:0> hash["b"]= "new"
+=> "new"
+irb(main):125:0> puts hash
+{"a"=>1, "b"=>"new"}
+=> nil
+irb(main):126:0> ^C
+irb(main):126:0> puts hash ["a"]
+1
+=> nil
+
+Hash within hashes:
+
+irb(main):129:0> hash ["cool"] = {"a"=>"b"}
+=> {"a"=>"b"}
+irb(main):130:0> hash
+=> {"a"=>1, "b"=>"new", "cool"=>{"a"=>"b"}}
+irb(main):131:0> 
+
+
+Safe way of defining constant:
+
+irb(main):131:0> ABC||= "Hello"
+=> "Hello"
+irb(main):132:0> ABC||= "Hi"
+=> "Hello"
+
+
+
+ITERATORS:
+select
+collecte
+each
+
+Range:
+irb(main):135:0> ('a'..'z').to_a
+=> ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+
+=== is equvalent to include?
+irb(main):139:0* (1..10)===4
+=> true
+irb(main):140:0> (1..10).include?( 4)
+=> true
+start...end excludes end
+start..end includes end
+
